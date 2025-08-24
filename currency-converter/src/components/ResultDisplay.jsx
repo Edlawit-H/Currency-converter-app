@@ -7,14 +7,18 @@ function ResultDisplay({ amount, from, to, result, rate }) {
       </h3>
       <p className="mt-2 text-lg">
         {amount} {from} = {result} {to}
-      </p>
+      </p>                                                                                                                                                                   
       {rate && (
         <div className="mt-3 bg-green-600 p-2 rounded-lg">
-          <p className="text-sm">
-            📈 1 {from} = {rate.toFixed(5)} {to}
+          <p className="text-xs font-semibold flex items-center justify-center gap-1 text-green-100">
+            📈 Current Exchange Rate
+          </p>
+          <p className="text-sm mt-1">
+            1 {from} = {rate.toFixed(5)} {to}
           </p>
         </div>
       )}
+
     </div>
   );
 }

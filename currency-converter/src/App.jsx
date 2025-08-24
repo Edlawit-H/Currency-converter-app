@@ -54,10 +54,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8 overflow-y-auto">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-4 px-2 sm:py-8 sm:px-4 space-y-6 overflow-y-auto">
       {/* Header */}
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
+      <header className="text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 leading-tight sm:leading-snug md:leading-normal lg:leading-normal">
           Currency Converter
         </h1>
         <p className="text-gray-500 mt-1">
@@ -65,10 +65,10 @@ function App() {
         </p>
       </header>
 
-      {/* Converter Card */}
-      <div className="bg-white shadow-lg rounded-2xl p-6 w-[400px]">
+      {/* 1️⃣ Converter Card */}
+      <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
         <AmountInput value={amount} onChange={setAmount} />
-        <div className="flex items-center gap-3 my-4">
+        <div className="flex flex-col sm:flex-row items-center gap-3 my-4">
           <CurrencySelector
             label="From"
             value={fromCurrency}
@@ -91,9 +91,11 @@ function App() {
         </div>
 
         <ConvertButton onClick={handleConvert} />
+      </div>
 
-        {error && <ErrorMessage message={error} />}
-        {result && (
+      {/* 2️⃣ Result Display Card */}
+      {result && (
+        <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
           <ResultDisplay
             amount={amount}
             from={fromCurrency}
@@ -101,21 +103,24 @@ function App() {
             result={result}
             rate={rate}
           />
-        )}
-      </div>
-
-      {/* History */}
-      {history.length > 0 && (
-        <div className="mt-8 w-[400px]">
-          <ConversionHistory history={history} />
-          <button
-          onClick={handleClear}
-          className="w-full mt-2 border border-gray-300 py-2 rounded-lg text-gray-600 hover:bg-gray-100 transition"
-        >
-          Clear All
-        </button>
         </div>
       )}
+
+      {/* 3️⃣ Conversion History Card */}
+      {history.length > 0 && (
+        <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
+          <ConversionHistory history={history} />
+          <button
+            onClick={handleClear}
+            className="w-full mt-4 bg-gradient-to-r from-blue-500 to-green-400 text-white py-2 rounded-xl font-semibold hover:opacity-90 active:scale-95 transition"
+          >
+            Clear All
+          </button>
+        </div>
+      )}
+
+      {/* Error message */}
+      {error && <ErrorMessage message={error} />}
     </div>
   );
 }
