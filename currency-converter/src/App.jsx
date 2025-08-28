@@ -96,7 +96,6 @@ function App() {
             onChange={setToCurrency}
           />
         </div>
-
         <ConvertButton onClick={handleConvert} />
       </div>
 

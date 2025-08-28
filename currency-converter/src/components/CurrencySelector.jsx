@@ -50,7 +50,6 @@ function CurrencySelector({ label, value, onChange }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-left border border-gray-300 rounded-xl p-2 bg-white shadow-sm flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-400 min-w-0"
       >
-        {/* Truncate only on mobile */}
         <span className="truncate sm:overflow-visible">
           {selectedCurrency.code} - {selectedCurrency.name}
         </span>
