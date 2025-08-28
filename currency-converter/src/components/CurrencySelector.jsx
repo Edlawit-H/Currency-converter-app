@@ -1,26 +1,26 @@
 import { useState, useRef, useEffect } from "react";
 
 const currencies = [
-  { code: "USD", name: "United States Dollar" },
-  { code: "EUR", name: "Euro" },
-  { code: "GBP", name: "British Pound Sterling" },
-  { code: "JPY", name: "Japanese Yen" },
-  { code: "CAD", name: "Canadian Dollar" },
-  { code: "AUD", name: "Australian Dollar" },
-  { code: "CHF", name: "Swiss Franc" },
-  { code: "CNY", name: "Chinese Yuan" },
-  { code: "INR", name: "Indian Rupee" },
-  { code: "SEK", name: "Swedish Krona" },
-  { code: "NZD", name: "New Zealand Dollar" },
-  { code: "ZAR", name: "South African Rand" },
-  { code: "SGD", name: "Singapore Dollar" },
-  { code: "HKD", name: "Hong Kong Dollar" },
-  { code: "NOK", name: "Norwegian Krone" },
-  { code: "KRW", name: "South Korean Won" },
-  { code: "MXN", name: "Mexican Peso" },
-  { code: "BRL", name: "Brazilian Real" },
-  { code: "RUB", name: "Russian Ruble" },
-  { code: "TRY", name: "Turkish Lira" },
+  { code: "USD", name: "United States Dollar", color: "text-blue-500" },
+  { code: "EUR", name: "Euro", color: "text-yellow-500" },
+  { code: "GBP", name: "British Pound Sterling", color: "text-purple-500" },
+  { code: "JPY", name: "Japanese Yen", color: "text-red-500" },
+  { code: "CAD", name: "Canadian Dollar", color: "text-green-500" },
+  { code: "AUD", name: "Australian Dollar", color: "text-indigo-500" },
+  { code: "CHF", name: "Swiss Franc", color: "text-teal-500" },
+  { code: "CNY", name: "Chinese Yuan", color: "text-pink-500" },
+  { code: "INR", name: "Indian Rupee", color: "text-orange-500" },
+  { code: "SEK", name: "Swedish Krona", color: "text-cyan-500" },
+  { code: "NZD", name: "New Zealand Dollar", color: "text-lime-500" },
+  { code: "ZAR", name: "South African Rand", color: "text-fuchsia-500" },
+  { code: "SGD", name: "Singapore Dollar", color: "text-rose-500" },
+  { code: "HKD", name: "Hong Kong Dollar", color: "text-emerald-500" },
+  { code: "NOK", name: "Norwegian Krone", color: "text-violet-500" },
+  { code: "KRW", name: "South Korean Won", color: "text-indigo-600" },
+  { code: "MXN", name: "Mexican Peso", color: "text-orange-600" },
+  { code: "BRL", name: "Brazilian Real", color: "text-green-600" },
+  { code: "RUB", name: "Russian Ruble", color: "text-red-600" },
+  { code: "TRY", name: "Turkish Lira", color: "text-blue-600" },
 ];
 
 function CurrencySelector({ label, value, onChange }) {
@@ -51,7 +51,7 @@ function CurrencySelector({ label, value, onChange }) {
         className="w-full text-left border border-gray-300 rounded-xl p-2 bg-white shadow-sm flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-400 min-w-0"
       >
         <span className="truncate sm:overflow-visible">
-          {selectedCurrency.code} - {selectedCurrency.name}
+          <span className={selectedCurrency.color}>{selectedCurrency.code}</span> - {selectedCurrency.name}
         </span>
         <span className="ml-2 text-gray-500">{isOpen ? "▲" : "▼"}</span>
       </button>
@@ -68,7 +68,7 @@ function CurrencySelector({ label, value, onChange }) {
               }}
               className="p-2 hover:bg-blue-100 cursor-pointer text-sm sm:text-base"
             >
-              {cur.code} - {cur.name}
+              <span className={cur.color}>{cur.code}</span> - {cur.name}
             </li>
           ))}
         </ul>
