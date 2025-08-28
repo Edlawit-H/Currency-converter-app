@@ -65,10 +65,12 @@ function App() {
         </p>
       </header>
 
-      {/* 1️⃣ Converter Card */}
+      {/* Converter Card */}
       <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
         <AmountInput value={amount} onChange={setAmount} />
-        <div className="flex flex-col sm:flex-row items-center gap-3 my-4">
+
+        {/* Horizontal From / Swap / To selectors */}
+        <div className="flex flex-row items-center gap-3 my-4">
           <CurrencySelector
             label="From"
             value={fromCurrency}
@@ -93,7 +95,7 @@ function App() {
         <ConvertButton onClick={handleConvert} />
       </div>
 
-      {/* 2️⃣ Result Display Card */}
+      {/* Result Display Card */}
       {result && (
         <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
           <ResultDisplay
@@ -106,7 +108,7 @@ function App() {
         </div>
       )}
 
-      {/* 3️⃣ Conversion History Card */}
+      {/* Conversion History Card */}
       {history.length > 0 && (
         <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
           <ConversionHistory history={history} />
