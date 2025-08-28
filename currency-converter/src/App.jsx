@@ -69,22 +69,27 @@ function App() {
       <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
         <AmountInput value={amount} onChange={setAmount} />
 
-        {/* Horizontal From / Swap / To selectors */}
-        <div className="flex flex-row items-center gap-3 my-4">
+        {/* From / Swap / To Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-between my-4 w-full">
+          {/* From selector */}
           <CurrencySelector
             label="From"
             value={fromCurrency}
             onChange={setFromCurrency}
           />
+
+          {/* Swap button */}
           <button
             onClick={() => {
               setFromCurrency(toCurrency);
               setToCurrency(fromCurrency);
             }}
-            className="p-2 border rounded-full hover:bg-gray-100 transition"
+            className="my-2 sm:mx-4 w-10 h-10 bg-gradient-to-br from-blue-400 to-green-400 text-white text-lg font-bold rounded-full shadow-md hover:opacity-90 active:scale-95 transition"
           >
             ↕
           </button>
+
+          {/* To selector */}
           <CurrencySelector
             label="To"
             value={toCurrency}
@@ -95,7 +100,7 @@ function App() {
         <ConvertButton onClick={handleConvert} />
       </div>
 
-      {/* Result Display Card */}
+      {/* Result Display */}
       {result && (
         <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 w-full sm:max-w-xl md:max-w-2xl">
           <ResultDisplay
