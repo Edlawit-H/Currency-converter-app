@@ -10,13 +10,13 @@ This project was built as part of my frontend learning journey. It showcases API
 
 The Currency Converter App allows users to:
 
-Select a base currency and a target currency
+- Select a base currency and a target currency
 
-Input an amount
+- Input an amount
 
-Instantly view the converted amount using real-time exchange rates
+- Instantly view the converted amount using real-time exchange rates
 
-(Optional) View a conversion history
+- View a conversion history
 
 ---
 
@@ -27,7 +27,7 @@ Instantly view the converted amount using real-time exchange rates
 - Real-time conversion result display
 - Basic validation for empty input
 - Responsive design with Tailwind CSS
-- (Optional) Conversion history
+- Conversion history
 - Deployment on Netlify/Vercel
 
 ---
