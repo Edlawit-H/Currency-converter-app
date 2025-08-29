@@ -33,7 +33,7 @@ The Currency Converter App allows users to:
 ---
 
 ## Demo
--Live App: https://currency-converter-app-fawn.vercel.app  
+- Live App: https://currency-converter-app-fawn.vercel.app  
 
 
 ## 🛠️ Tech Stack
