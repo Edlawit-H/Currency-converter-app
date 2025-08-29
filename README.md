@@ -1,23 +1,27 @@
-# 💱 Currency Converter App
+# Currency Converter
 
-A simple and responsive currency converter built with **React**, **Vite**, and **Tailwind CSS**, using real-time exchange rates from the [Frankfurter API](https://www.frankfurter.app/).
-
-## 🚀 Project Overview
-The Currency Converter App allows users to:
-- Select a base currency and a target currency
-- Input an amount
-- Instantly view the converted amount using **real-time exchange rates**
-- (Optional) View a conversion history
-
-This project is part of my ** ALX Frontend Capstone Project**, showcasing my skills in:
-- API integration
-- State management
-- Responsive UI design
-- Component-based architecture
+A responsive React application that converts between different currencies using real-time exchange rates from the Frankfurter API.
 
 ---
 
-## 📌 Features
+## Overview
+
+This project was built as part of my frontend learning journey. It showcases API integration, responsive UI design, and handling edge cases in React.
+
+The Currency Converter App allows users to:
+
+Select a base currency and a target currency
+
+Input an amount
+
+Instantly view the converted amount using real-time exchange rates
+
+(Optional) View a conversion history
+
+---
+
+## Features
+
 - Currency selection dropdowns
 - Amount input field
 - Real-time conversion result display
@@ -28,7 +32,15 @@ This project is part of my ** ALX Frontend Capstone Project**, showcasing my ski
 
 ---
 
+## Demo
+
+- Live App: \[Insert Netlify/Vercel link]
+- Demo Video: \[Insert Loom link]
+
+---
+
 ## 🛠️ Tech Stack
+
 - **React + Vite** – Fast, modern frontend setup
 - **Tailwind CSS** – Utility-first responsive styling
 - **Frankfurter API** – Real-time currency exchange rates
@@ -36,10 +48,33 @@ This project is part of my ** ALX Frontend Capstone Project**, showcasing my ski
 
 ---
 
-## Live Demo
-(Coming soon)
+## Getting Started
+
+Clone the repository and run locally:
+
+```bash
+git clone https://github.com/Edlawit-H/Currency-converter-app
+cd currency-converter
+npm install
+npm run dev
+```
 
 ---
 
-## Author
-Edlawit Huluwork Abebe
+## Lessons Learned
+
+- API Integration
+- State Management
+- Responsive UI Design
+- Component-Based Architecture
+- Deployment Preparation
+
+---
+
+## Future Improvements
+
+- Add cryptocurrency support (BTC, ETH)
+- Dark mode toggle
+- “Favorite currencies” for quick access
+
+---
