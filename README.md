@@ -34,7 +34,6 @@ The Currency Converter App allows users to:
 
 ## Demo
 -Live App: https://currency-converter-app-fawn.vercel.app  
--Demo Video: https://www.loom.com/share/56cd24adf4ca4844a4a1493cb7fa3bd0
 
 
 ## 🛠️ Tech Stack
