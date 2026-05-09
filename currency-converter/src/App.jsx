@@ -23,7 +23,7 @@ function App() {
     setError("");
     try {
       const res = await fetch(
-        `https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`
+        `https://api.frankfurter.dev/v1/latest?amount=${amount}&base=${fromCurrency}&symbols=${toCurrency}`
       );
       const data = await res.json();
       const converted = data.rates[toCurrency];
